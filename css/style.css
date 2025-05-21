@@ -6,17 +6,23 @@
     --blanco: #ffffff;
     --negro: #000000;
 }
+
 html {
     box-sizing: border-box;
-    font-size: 62,5; /* 1rem = 10px*/
+    font-size: 62, 5;
+    /* 1rem = 10px*/
 }
-*,*:before,*:after{
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
+
 body {
     font-family: var(--fuenteParrafo);
-    font-size: 1.6rem;
-    line-height: 2; /*interlineado entre párrafos*/
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 /** Globales **/
@@ -25,24 +31,34 @@ body {
     width: 90%;
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
 }
-h1,h2,h3,h4 {
+
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--fuenteHeadinng);
 }
+
 h1 {
-    font-size: 4.8rem;
+    font-size: 2.0rem;
 }
+
 h2 {
-    font-size: 4rem;
+    font-size: 1.6rem;
 }
+
 h3 {
-    font-size: 3.2rem;
+    font-size: 1.2rem;
 }
+
 h4 {
-    font-size: 2.8rem;
+    font-size: 1rem;
 }
+
 img {
     max-width: 100%;
 }
@@ -51,9 +67,70 @@ img {
 .no-margin {
     margin: 0;
 }
+
 .no-padding {
     padding: 0;
 }
+
 .centrar-texto {
     text-align: center;
+}
+
+/**HEADER**/
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*lo centra tanto en horizontal como en vertical cuando disminuimos el tamaño de a pantalla*/
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 10rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        /*alinear horizontalmente*/
+        align-items: center;
+        /*alinear verticalmente*/
+    }
+}
+
+.logo {
+    color: var(--blanco);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--blanco);
 }
