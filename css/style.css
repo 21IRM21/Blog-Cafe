@@ -3,6 +3,7 @@
     --fuenteParrafo: 'Open Sans', sans-serif;
 
     --primario: #784D3C;
+    --gris:#e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
 }
@@ -21,14 +22,15 @@ html {
 
 body {
     font-family: var(--fuenteParrafo);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     line-height: 1.5;
 }
 
 /** Globales **/
 .contenedor {
-    max-width: 120rem;
-    width: 90%;
+    /*max-width: 120rem;
+    width: 90%;    estas dos líneas de código es lo mismo que la de abajo*/
+    width: min(90%,120rem);
     margin: 0 auto;
 }
 
@@ -41,22 +43,23 @@ h2,
 h3,
 h4 {
     font-family: var(--fuenteHeadinng);
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: 2.0rem;
+    font-size: 2.2rem;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 img {
@@ -89,14 +92,17 @@ img {
 .header__texto {
     text-align: center;
     color: var(--blanco);
-    margin-top: 2.5rem;
+    margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
     .header__texto {
-        margin-top: 10rem;
+        margin-top: 7rem;
     }
 
+}
+.barra {
+    padding-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -115,6 +121,7 @@ img {
 
 .logo__nombre {
     font-weight: 400;
+    margin-top: 1rem;
 }
 
 .logo__bold {
@@ -133,4 +140,69 @@ img {
     text-align: center;
     font-size: 1rem;
     color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2.5rem;
+    }
+}
+
+.emtrada-blog {
+    border-bottom: 0.1rem solid var(--gris);
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeadinng);
+    text-align: center;
+    color: var(--blanco);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+@media (min-width: 780px){
+    .boton{
+        display: inline-block;
+    }
+    
+}
+.boton--primario {
+    background-color: var(--negro);
+}
+.boton--secundario {
+    background-color: var(--primario);
+}
+.curso {
+list-style-type: none;
+}
+.widget-curso {
+    border-bottom: 0.1rem solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type { /*Para quitar la linea gris del último tipo*/
+    border: none;
+    margin-bottom: 0;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeadinng);
+    font-weight: 700;
+}
+.widget-curso__info {
+    font-weight: 400;
+}
+/*FOOTER*/
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 2rem;
+    margin-top:2rem;
 }
