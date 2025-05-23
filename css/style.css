@@ -206,3 +206,11 @@ list-style-type: none;
     padding-bottom: 2rem;
     margin-top:2rem;
 }
+/*SOBRE NOSOTROS*/
+@media (min-width: 768px){
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        column-gap: 2rem;
+    }
+}
