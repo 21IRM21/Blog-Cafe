@@ -10,7 +10,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62, 5;
+    font-size: 62.5%;
     /* 1rem = 10px*/
 }
 
@@ -22,8 +22,8 @@ html {
 
 body {
     font-family: var(--fuenteParrafo);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 1.6rem;
+    line-height: 2;
 }
 
 /** Globales **/
@@ -47,19 +47,19 @@ h4 {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 3.8rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 3.0rem;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 2.6rem;
 }
 
 h4 {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 img {
@@ -82,7 +82,7 @@ img {
 /**HEADER**/
 .header {
     background-image: url(../img/banner.jpg);
-    height: 25rem;
+    height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -139,7 +139,7 @@ img {
 .navegacion__enlace {
     display: block;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.6rem;
     color: var(--blanco);
 }
 
@@ -166,18 +166,21 @@ img {
     font-family: var(--fuenteHeadinng);
     text-align: center;
     color: var(--blanco);
-    padding: 0.5rem 1.5rem;
-    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 1rem;
+    border: none;
 }
 
 @media (min-width: 780px) {
     .boton {
         display: inline-block;
     }
-
+}
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -193,7 +196,7 @@ img {
 }
 
 .widget-curso {
-    border-bottom: 0.1rem solid var(--gris);
+    border-bottom: 1px solid var(--gris);
     margin-bottom: 2rem;
 }
 
@@ -260,7 +263,28 @@ img {
 
 .contacto-bg {
     background-image: url(../img/contacto.jpg);
-    height:30rem;
+    height: 40rem;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 2.5rem;
+}
+.campo {
+    display: flex;    
+}
+.campo__label {
+    flex: 0 0 9rem; /*crecimiento, más pequeño, valor inicial del campo label*/    
+    padding-right: 2rem; /*para qudeden separados los labelde los input o poner un gap en campo*/
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+height: 8rem;
 }
