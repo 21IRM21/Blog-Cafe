@@ -3,7 +3,7 @@
     --fuenteParrafo: 'Open Sans', sans-serif;
 
     --primario: #784D3C;
-    --gris:#e1e1e1;
+    --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
 }
@@ -30,7 +30,7 @@ body {
 .contenedor {
     /*max-width: 120rem;
     width: 90%;    estas dos líneas de código es lo mismo que la de abajo*/
-    width: min(90%,120rem);
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -101,6 +101,7 @@ img {
     }
 
 }
+
 .barra {
     padding-top: 1rem;
 }
@@ -154,6 +155,7 @@ img {
     border-bottom: 0.1rem solid var(--gris);
     margin-bottom: 2rem;
 }
+
 .entrada-blog:last-of-type {
     border: none;
     margin-bottom: 0;
@@ -170,47 +172,95 @@ img {
     font-weight: 700;
     margin-bottom: 1rem;
 }
-@media (min-width: 780px){
-    .boton{
+
+@media (min-width: 780px) {
+    .boton {
         display: inline-block;
     }
-    
+
 }
+
 .boton--primario {
     background-color: var(--negro);
 }
+
 .boton--secundario {
     background-color: var(--primario);
 }
+
 .curso {
-list-style-type: none;
+    list-style-type: none;
 }
+
 .widget-curso {
     border-bottom: 0.1rem solid var(--gris);
     margin-bottom: 2rem;
 }
-.widget-curso:last-of-type { /*Para quitar la linea gris del último tipo*/
+
+.widget-curso:last-of-type {
+    /*Para quitar la linea gris del último tipo*/
     border: none;
     margin-bottom: 0;
 }
+
 .widget-curso__label {
     font-family: var(--fuenteHeadinng);
     font-weight: 700;
 }
+
 .widget-curso__info {
     font-weight: 400;
 }
+
 /*FOOTER*/
 .footer {
     background-color: var(--negro);
     padding-bottom: 2rem;
-    margin-top:2rem;
+    margin-top: 2rem;
 }
-/*SOBRE NOSOTROS*/
-@media (min-width: 768px){
+
+/** SOBRE NOSOTROS **/
+@media (min-width: 768px) {
     .sobre-nosotros {
         display: grid;
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
     }
+}
+
+/** CURSOS **/
+
+.cursos {
+    padding: 3rem 0;
+    border-bottom: 1.3px solid var(--gris);
+}
+
+.cursos:last-of-type {
+    border: none;
+}
+
+@media (min-width: 468px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.cursos__label {
+    font-family: var(--fuenteHeadinng);
+    font-weight: 700;
+}
+
+.cursos__info {
+    font-weight: 400;
+}
+
+/**Contacto**/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height:30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
