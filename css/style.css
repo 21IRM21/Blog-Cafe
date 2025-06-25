@@ -288,3 +288,17 @@ img {
 .campo__field--textarea {
 height: 8rem;
 }
+
+.error {
+    background: rgb(185, 0, 0); /* rojo intenso */
+    padding: 1rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.exito {
+    background: rgb(0, 185, 0); /* verde intenso */
+    padding: 1rem;
+    color: var(--blanco); 
+    text-align: center;
+}
